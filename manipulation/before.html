@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        p {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Greetings</h2>
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+</div>
+
+<p> is what I said.... </p>
+
+<script>
+    $( ".inner").before( "<p>Test</p>" );
+    $( ".container").before( $( "h2" ) );
+    $("p").before("<b>Hello</b>");
+    $("h2").before( document.createTextNode( "Hellooooooo" ) );
+
+</script>
+</body>
+</html>

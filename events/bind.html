@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+<span id="foo">fooo</span><br>
+<span id="bar">barrrr</span>
+
+<script>
+
+//    $("#foo").bind("click", function() {
+//        alert("User clicked on 'foo.'");
+//    });
+//
+//    $("#foo").bind("mouseenter mouseleave", function() {
+//        $(this).toggleClass("entered");
+//    });
+
+//    $("#foo").bind({
+//        click: function() {
+//            alert("gggggg");
+//        },
+//        mouseenter: function() {
+//            $(this).toggleClass("entered")
+//        }
+//    });
+
+
+//    $("#foo").bind("click", function() {
+//        alert($(this).text());
+//    });
+
+//    $(document).ready(function() {
+//        $("#foo").bind("click", function(event) {
+//            alert("The mouse cursor is at (" +
+//            event.pageX + ", " + event.pageY +
+//            ")" );
+//        });
+//    });
+
+
+
+//    내가 원한대로 안됨..
+//    var message = "Spoon!";
+//    $("#foo").bind("click", function() {
+//        alert(message);
+//    });
+//    message = "Not in the face!";
+//    $("#bar").bind("click", function() {
+//        alert(message);
+//    });
+
+    var message = "Spoon!";
+    $("#foo").bind("click", {
+        msg: message
+    }, function(event) {
+        alert(event.data.msg);
+    });
+    message = "Not in the face!";
+    $("#bar").bind("click", {
+        msg: message
+    }, function(event) {
+        alert(event.data.msg);
+    });
+
+</script>
+
+<p>pppppppppppppppppppp</p>
+
+<form>
+    <button type="submit">submit</button>
+</form>
+
+<script>
+//    $("p").bind("click", function() {
+//        alert($(this).text());
+//    });
+
+    function handler(event) {
+        alert(event.data.foo);
+    }
+    $("p").bind("click",{
+        foo: "bar"
+    }, handler);
+
+//    $("form").bind("submit", function() {
+//        return false;
+//    })
+
+//    $("form").bind("submit", function(event) {
+//        event.preventDefault();
+//    });
+
+    $("form").bind("submit", function(event) {
+        event.stopPropagation();
+    });
+
+</script>
+
+<div class="test">aaa</div>
+
+<script>
+    $("div.test").bind({
+        click: function() {
+            $(this).addClass("active");
+        },
+        mouseenter: function() {
+            $(this).addClass("inside");
+        },
+        mouseleave: function() {
+            $(this).removeClass("inside");
+        }
+    });
+</script>
+</body>
+</html>

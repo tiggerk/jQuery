@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        input, label {
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <div>
+        <input type="radio" name="fruit" value="orange" id="orange">
+        <label for="orange">orange</label>
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="apple" id="apple">
+        <label for="apple">apple</label>
+    </div>
+    <div>
+        <input type="radio" name="fruit" value="banana" id="banana">
+        <label for="banana">banana</label>
+    </div>
+    <div id="log"></div>
+</form>
+
+<div></div>
+
+<script>
+    $("input").on("click", function() {
+        $("#log").html($("input:checked").val() + " is checked!");
+    });
+</script>
+</body>
+</html>

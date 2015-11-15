@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        div {
+            color: blue;
+        }
+        span {
+            color: red;
+        }
+        b {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+<div>Zero-th<span></span></div>
+<div>First<span></span></div>
+<div>Second<span></span></div>
+
+<script>
+$( "div")
+    .attr("id", function(arr) {
+        return "div-id" + arr;
+    })
+    .each(function() {
+        $( "span", this).html( "(id = '<b>" + this.id + "</b>')" );
+    });
+
+
+</script>
+</body>
+</html>

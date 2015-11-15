@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        div {
+            float: left;
+        }
+        span {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <ul>
+        <li>John</li>
+        <li>Karl</li>
+        <li>Adam</li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li>Dan</li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li>Dave</li>
+        <li>Rick</li>
+        <li>Timmy</li>
+        <li>Gibson</li>
+    </ul>
+</div>
+
+<script>
+    $("ul li:nth-last-of-type(2)").append("<span> - 2nd to last!</span>");
+</script>
+</body>
+</html>

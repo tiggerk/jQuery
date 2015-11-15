@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>after demo</title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        p {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h2>H2</h2>
+<p>I would like to say: </p>
+<div>divdiv</div>
+<h3>h3</h3>
+<script>
+$("p").after("<b>Hello</b>");
+$("div").after( document.createTextNode( "Hello2") );
+$("h3").after($("h2"));
+
+</script>
+
+</body>
+</html>

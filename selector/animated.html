@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        div {
+            background: yellow;
+            border: 1px solid #AAA;
+            width: 80px;
+            height: 80px;
+            margin: 0 5px;
+            float: left;
+        }
+        div.colored {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<button id="run">Run</button>
+
+<div></div>
+<div id="mover"></div>
+<div></div>
+
+
+<script>
+
+    $("#run").click(function() {
+        $("div:animated").toggleClass("colored");
+    });
+
+    function animateIt() {
+        $("#mover").slideToggle("slow", animateIt);
+    }
+    animateIt();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+<div>no id</div>
+<div id="hey">with id</div>
+<div id="there">has an id</div>
+<div>nope</div>
+
+<script>
+    // Using .one() so the handler is executed at most once
+    // per element per event type
+    $("div[id]").one("click", function() {
+        var idString = $(this).text() + " = " + $(this).attr("id");
+        $(this).text(idString);
+    });
+</script>
+
+</body>
+</html>

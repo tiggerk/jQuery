@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>addClass demo</title>
+    <style>
+        p {
+            margin: 8px;
+            font-size: 16px;
+        }
+        .selected {
+            color: blue;
+        }
+        .highlight {
+            background: yellow;
+        }
+    </style>
+    <script src="../../jquery-1.11.2.min.js"></script>
+</head>
+<body>
+
+<p>Hello</p>
+<p>and</p>
+<p>Goodbye</p>
+
+
+<script>
+    $( "p" ).first().addClass( "selected" );
+    $( "p:last" ).addClass( "selected highlight" );
+    $( "p:last").removeClass("selected");
+
+</script>
+
+</body>
+</html>

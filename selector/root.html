@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        span.fot {
+            color: red;
+            font-size: 120%;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div id="log">The root of this document is: </div>
+
+<script>
+    $("<b></b>").html($(":root")[0].nodeName).appendTo("#log");
+</script>
+</body>
+</html>

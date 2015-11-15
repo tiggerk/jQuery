@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        span.fot {
+            color: red;
+            font-size: 120%;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <span>Corey,</span>
+    <span>Yehuda,</span>
+    <span>Adam,</span>
+    <span>Todd</span>
+</div>
+<div>
+    <b>Nobody,</b>
+    <span>Jörn,</span>
+    <span>Scott,</span>
+    <span>Timo</span>
+</div>
+
+
+<script>
+$("span:first-of-type").addClass("fot");
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>after demo</title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Greetings</h2>
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+</div>
+
+<script>
+    $(".inner").after("<p>.after()</p>");
+    $(".container").after($("h2"));
+
+    var $newdiv1 = $("<div id='object1'/>"),
+            newdiv2 = document.createElement("div"),
+            existingdiv1 = document.getElementById("foo");
+
+    $("p").first().after($newdiv1, [newdiv2, existingdiv1]);
+
+</script>
+
+</body>
+</html>

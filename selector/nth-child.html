@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-1.11.2.min.js"></script>
+    <style>
+        div {
+            float: left;
+        }
+        span {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <ul>
+        <li>John</li>
+        <li>Karl</li>
+        <li>Brandon</li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li>Sam</li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li>Glen</li>
+        <li>Tane</li>
+        <li>Ralph</li>
+        <li>David</li>
+    </ul>
+</div>
+
+<script>
+
+    $("ul li:nth-child(2)").append("<span> - 2nd!</span>");
+
+
+</script>
+</body>
+</html>
